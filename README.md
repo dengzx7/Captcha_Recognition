@@ -1,15 +1,15 @@
-# Captcha_Recognition
-SYSU Deep Learning Research Project<br>
-基于AlexNet模型、tensorflow框架实现的验证码识别<br>
-<div align=center>
-<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/AlexNet.png" width="750">
-</div>
+# Captcha Recognition
+Deep Learning Research Project<br>
+基于Tensorflow框架实现的验证码识别任务的AlexNet模型和ResNet模型<br>
 
 ## 项目概览
 本项目按照以下步骤来实现验证码识别，训练50 Epochs后最终在测试集上的最高预测精度达到了 **97.5%**
 * 爬取数据
 * 数据预处理
 * 训练模型与预测
+<div align=center>
+<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E6%A1%86%E6%9E%B6.PNG" width="750">
+</div>
 
 ## 项目环境
 * 编程语言：python 3.6.4
@@ -19,7 +19,7 @@ SYSU Deep Learning Research Project<br>
 ## 运行方式
 ### 1. 爬取数据
 **注：该步骤在项目中已完成，可以直接跳过该步骤<br>**
-运行cmd指令，使用python requests爬取中山大学本科教务系统登陆界面的验证码
+运行cmd指令，使用python requests爬取SYSU本科教务系统登陆界面的验证码
 ```
 > python generate_captcha.py
 ```
@@ -33,17 +33,16 @@ SYSU Deep Learning Research Project<br>
 </div>
 
 ### 2. 数据预处理
-**注：该步骤在项目中已完成，可以直接跳过该步骤<br>**
-若想重做该步骤，需要先将Captcha_Recognition/dataset目录下的以下文件删除
+运行cmd指令，执行数据预处理
+```
+> python preprocess_captcha.py
+```
+执行后将在Captcha_Recognition/dataset目录下生成以下文件夹或文件
 * preprocess
 * segmatation
 * test_file_labels.json
 * train_file_labels.json
 
-再运行cmd指令，数据预处理就完成了
-```
-> python preprocess_captcha.py
-```
 预处理验证码图片，包含以下四个步骤
 * 去除干扰线
 * 灰度化和二值化
@@ -55,18 +54,31 @@ SYSU Deep Learning Research Project<br>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E9%A2%84%E5%A4%84%E7%90%86%E8%BF%87%E7%A8%8B.png" width="500">
 </div>
 
-图像分割过程是将一张包含四个字母或数字的验证码均分成四张图片，每一张分割后的图片包含一个字母或数字，AlexNet模型将对每一张分割后的图片进行训练，测试时先将测试集验证码分割为四张图片，若分割后的四张图片都预测正确，才算预测正确，分割后的部分结果如下图所示
+图像分割过程是将一张包含四个字母或数字的验证码均分成四张图片，每一张分割后的图片包含一个字母或数字，分类模型将对每一张分割后的图片进行训练，测试时先将测试集验证码分割为四张图片，若分割后的四张图片都预测正确，才算预测正确，分割后的部分结果如下图所示
 
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E5%88%86%E5%89%B2%E5%90%8E%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86.png" width="550">
 </div>
 
 ### 3. 训练模型与预测
-运行cmd指令，开始模型训练和预测
-```
-> python train.py
-```
-在Captcha_Recognition/record目录下会生成record.txt文件和predict.txt文件，分别记录训练过程中的损失值cost、训练集精度和测试集精度，每10 Epochs会在Captcha_Recognition/alexnet_param目录下保存模型参数，训练50 Epochs后最终ALexNet模型在测试集上的最高预测精度达到了 **97.5%**
+在Captcha_Recognition/record目录下会生成record.txt文件和predict.txt文件，分别记录训练过程中的损失值cost、训练集精度和测试集精度，每10 Epochs会在Captcha_Recognition/alexnet_param目录下保存模型参数
+#### 3.1 AlexNet
 <div align=center>
-<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/result.png" width="500">
+<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/AlexNet.png" width="500">
 </div>
+运行cmd指令，训练AlexNet模型
+```
+> python train.py --model alexnet
+```
+训练50 Epochs后最终ALexNet模型在测试集上的最高预测精度达到了 **?%**
+（图）
+#### 3.2 ResNet
+<div align=center>
+<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/ResNet.png" width="500">
+</div>
+运行cmd指令，训练ResNet模型
+```
+> python train.py --model resnet
+```
+训练50 Epochs后最终ALexNet模型在测试集上的最高预测精度达到了 **?%**
+（图）
