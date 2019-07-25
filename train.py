@@ -26,8 +26,8 @@ FLAGS = flags.FLAGS
 
 flags.DEFINE_string('model', 'alexnet', 'model names including alexnet and resnet.')
 flags.DEFINE_float('learning_rate', 1e-4, 'initial learning rate.')
-flags.DEFINE_integer('epochs', 1, 'number of epochs to train.')
-flags.DEFINE_integer('batch_size', 64, 'minibatch size.')
+flags.DEFINE_integer('epochs', 50, 'number of epochs to train.')
+flags.DEFINE_integer('batch_size', 256, 'minibatch size.')
 flags.DEFINE_float('dropout', 0.5, 'dropout rate (1 - keep probability).')
 
 def model_run():
