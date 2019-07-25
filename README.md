@@ -1,12 +1,12 @@
 # Captcha Recognition
 Deep Learning Research Project<br>
-基于Tensorflow框架实现的验证码识别任务的AlexNet模型和ResNet模型<br>
+基于Tensorflow框架、AlexNet模型和ResNet模型实现的验证码识别任务<br>
 
 ## 项目概览
 本项目按照以下步骤来实现验证码识别，训练50 Epochs后最终在测试集上的最高预测精度达到了 **?%**
-* 爬取数据 Requests
-* 数据预处理 Preprocess
-* 训练模型与预测 Train
+* 爬取数据 **Requests**
+* 数据预处理 **Preprocess**
+* 训练模型与预测 **Train**
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E6%A1%86%E6%9E%B6.PNG" width="750">
 </div>
@@ -62,7 +62,7 @@ Deep Learning Research Project<br>
 
 ### 三、训练模型与预测
 在Captcha_Recognition/record目录下会生成record.txt文件和predict.txt文件，分别记录训练过程中的损失值cost、训练集精度和测试集精度，每10 Epochs会在Captcha_Recognition/alexnet_param目录下保存模型参数
-#### 3.1 AlexNet
+### 3.1 AlexNet
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/AlexNet.png" width="750">
 </div>
@@ -75,7 +75,7 @@ Deep Learning Research Project<br>
 训练50 Epochs后最终ALexNet模型在测试集上的最高预测精度达到了 **?%**
 （图）
 
-#### 3.2 ResNet
+### 3.2 ResNet(34-layer)
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/ResNet.png" width="500">
 </div>
