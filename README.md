@@ -3,7 +3,7 @@ Deep Learning Research Project<br>
 基于Tensorflow框架、AlexNet模型和ResNet模型实现的验证码识别任务<br>
 
 ## 项目概览
-本项目按照以下步骤来实现验证码识别，训练50 Epochs后最终在测试集上的最高预测精度达到了 **?%**
+本项目按照以下步骤来实现验证码识别，训练50 Epochs后，AlexNet在测试集上的最高预测精度达到了 **?%** ，ResNet在测试集上的最高预测精度达到了 **?%**
 * 爬取数据 **Requests**
 * 数据预处理 **Preprocess**
 * 训练模型与预测 **Train**
