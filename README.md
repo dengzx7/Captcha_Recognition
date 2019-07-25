@@ -3,10 +3,10 @@ Deep Learning Research Project<br>
 基于Tensorflow框架实现的验证码识别任务的AlexNet模型和ResNet模型<br>
 
 ## 项目概览
-本项目按照以下步骤来实现验证码识别，训练50 Epochs后最终在测试集上的最高预测精度达到了 **97.5%**
-* 爬取数据
-* 数据预处理
-* 训练模型与预测
+本项目按照以下步骤来实现验证码识别，训练50 Epochs后最终在测试集上的最高预测精度达到了 **?%**
+* 爬取数据 Requests
+* 数据预处理 Preprocess
+* 训练模型与预测 Train
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E6%A1%86%E6%9E%B6.PNG" width="750">
 </div>
@@ -17,7 +17,7 @@ Deep Learning Research Project<br>
 * 操作系统：Windows 10
 
 ## 运行方式
-### 1. 爬取数据
+### 一、爬取数据
 **注：该步骤在项目中已完成，可以直接跳过该步骤<br>**
 运行cmd指令，使用python requests爬取SYSU本科教务系统登陆界面的验证码
 ```
@@ -32,7 +32,7 @@ Deep Learning Research Project<br>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E9%AA%8C%E8%AF%81%E7%A0%81%E6%95%B0%E6%8D%AE%E9%9B%86.png" width="500">
 </div>
 
-### 2. 数据预处理
+### 二、数据预处理
 运行cmd指令，执行数据预处理
 ```
 > python preprocess_captcha.py
@@ -60,25 +60,31 @@ Deep Learning Research Project<br>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/%E5%88%86%E5%89%B2%E5%90%8E%E7%9A%84%E6%95%B0%E6%8D%AE%E9%9B%86.png" width="550">
 </div>
 
-### 3. 训练模型与预测
+### 三、训练模型与预测
 在Captcha_Recognition/record目录下会生成record.txt文件和predict.txt文件，分别记录训练过程中的损失值cost、训练集精度和测试集精度，每10 Epochs会在Captcha_Recognition/alexnet_param目录下保存模型参数
 #### 3.1 AlexNet
 <div align=center>
-<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/AlexNet.png" width="500">
+<img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/AlexNet.png" width="750">
 </div>
+
 运行cmd指令，训练AlexNet模型
 ```
 > python train.py --model alexnet
 ```
+
 训练50 Epochs后最终ALexNet模型在测试集上的最高预测精度达到了 **?%**
 （图）
+
 #### 3.2 ResNet
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/ResNet.png" width="500">
 </div>
+
 运行cmd指令，训练ResNet模型
 ```
 > python train.py --model resnet
 ```
+
 训练50 Epochs后最终ALexNet模型在测试集上的最高预测精度达到了 **?%**
 （图）
+
