@@ -61,7 +61,7 @@ Deep Learning Research Project<br>
 </div>
 
 ### 三、训练模型与预测
-在Captcha_Recognition/record目录下会生成record.txt文件和predict.txt文件，分别记录训练过程中的损失值loss、训练集精度和测试集精度，当程序结束时会在Captcha_Recognition/alexnet_param目录下保存模型参数
+在Captcha_Recognition/record目录下会生成record.txt文件和predict.txt文件，分别记录训练过程中的损失值loss、训练集精度和测试集精度，当程序结束时会在Captcha_Recognition/model_param目录下保存模型参数
 ### 3.1 AlexNet
 <div align=center>
 <img src="https://github.com/dengzx7/Captcha_Recognition/blob/master/images/AlexNet.png" width="750">
