@@ -1,5 +1,5 @@
 # Captcha Recognition
-Deep Learning Research Project<br>
+Deep Learning Research Project (Smart Mobile networking and Computing Lab)<br>
 基于Tensorflow框架、AlexNet模型和ResNet模型实现的验证码识别任务<br>
 
 ## 项目概览
